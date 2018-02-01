@@ -1,6 +1,6 @@
 <?php
 
-namespace SkyZoneMC\OneLine;
+namespace Sky\OneLine;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
