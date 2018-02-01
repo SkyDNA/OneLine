@@ -60,7 +60,7 @@ class OneLine extends PluginBase implements Listener{
         $y = $this->cfg->get('y');
         $z = $this->cfg->get('z');
         $this->particle = new FloatingTextParticle(new Position($x, $y, $z, $this->getServer()->getDefaultLevel()), '');
-        $this->getLogger()->info($this->prefix.TextFormat::WHITE.' by SkyZoneMC enabled!');
+        $this->getLogger()->info($this->prefix.TextFormat::WHITE.' by Sky enabled!');
     }
     
     public function initConfig(){
