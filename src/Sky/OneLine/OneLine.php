@@ -497,7 +497,7 @@ class OneLine extends PluginBase implements Listener{
                 $damagerinv = $damager->getInventory();
                 $iteminhand = $damagerinv->getItemInHand()->getId();
                 if($iteminhand == 280){
-                    $event->setKnockBack(0.4);
+                    $event->setKnockBack(0.3);
                     $event->setDamage(0);
                 }
             }
@@ -764,7 +764,7 @@ class OLTask extends PluginTask{
                             return;
                         }
                         $player->getLevel()->addSound(new ClickSound($player));
-                        $player->sendMessage($prefix.TextFormat::WHITE.' Waiting for 2 players!');
+                        $player->sendMessage($prefix.TextFormat::WHITE.'Waiting for 2 Players');
                     }
                     
                     $arenafile->set('counter', 0);
@@ -837,7 +837,7 @@ class OLTask extends PluginTask{
                         }
                         $player->getInventory()->clearAll();
                         $item = Item::get(280, 0, 1);
-                        $item->setCustomName(TextFormat::GOLD.TextFormat::ITALIC.'KNOCKBACK');
+                        $item->setCustomName(TextFormat::GOLD.TextFormat::ITALIC.'Knockback Stick');
                         $player->getInventory()->setItem(0, $item, TRUE);
                         $player->sendPopup(TextFormat::GREEN.'GO!');
                         $player->sendMessage($prefix.TextFormat::WHITE.' You have 2 minutes to kill your opponent!');
