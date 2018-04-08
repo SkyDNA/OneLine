@@ -716,7 +716,7 @@ class OneLine extends PluginBase implements Listener{
         $lines = $event->getLines();
         if($lines['0'] == '[oljoin]'){
             $event->setLine(0, $this->prefix);
-            $event->setLine(1, TextFormat::GREEN.'JOIN');
+            $event->setLine(1, TextFormat::GREEN.'Join');
             $event->setLine(2, TextFormat::WHITE.'Finds an');
             $event->setLine(3, TextFormat::WHITE.'empty arena.');
         }
@@ -787,7 +787,7 @@ class OLTask extends PluginTask{
                                         $prefix,
                                         $gamename,
                                         TextFormat::GRAY.'1'.TextFormat::BLACK.' / '.TextFormat::RED.'2',
-                                        TextFormat::GREEN.'JOIN'
+                                        TextFormat::GREEN.'Join'
                                     );
                             }
                         }
@@ -808,7 +808,7 @@ class OLTask extends PluginTask{
                                         $prefix,
                                         $gamename,
                                         TextFormat::GRAY.'0'.TextFormat::BLACK.' / '.TextFormat::RED.'2',
-                                        TextFormat::GREEN.'JOIN'
+                                        TextFormat::GREEN.'Join'
                                     );
                             }
                         }
@@ -934,7 +934,7 @@ class OLTask extends PluginTask{
                                             $prefix,
                                             $gamename,
                                             TextFormat::GRAY.'0'.TextFormat::BLACK.' / '.TextFormat::RED.'2',
-                                            TextFormat::GREEN.'JOIN'
+                                            TextFormat::GREEN.'Join'
                                         );
                                 }
                             }
