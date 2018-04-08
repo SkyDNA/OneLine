@@ -129,7 +129,7 @@ class OneLine extends PluginBase implements Listener{
                                             $this->prefix,
                                             $arenaname,
                                             TextFormat::GRAY.'0'.TextFormat::BLACK.' / '.TextFormat::RED.'2',
-                                            TextFormat::GREEN.'JOIN'
+                                            TextFormat::GREEN.'Join'
                                         );
                                 }
                             }
@@ -288,7 +288,7 @@ class OneLine extends PluginBase implements Listener{
             if($tile instanceof Sign){
                 $text = $tile->getText();
                 if($text['0'] == $this->prefix){
-                    if(TextFormat::clean($text['1']) == 'JOIN'){
+                    if(TextFormat::clean($text['1']) == 'Join'){
                         $atj = $this->getArenaToJoin();
                         if($atj == 'no'){
                             $player->sendMessage($this->prefix.TextFormat::WHITE.' All arenas are full!');
@@ -306,7 +306,7 @@ class OneLine extends PluginBase implements Listener{
                                                         $this->prefix,
                                                         $atj,
                                                         TextFormat::GRAY.'1'.TextFormat::BLACK.' / '.TextFormat::RED.'2',
-                                                        TextFormat::GREEN.'JOIN'
+                                                        TextFormat::GREEN.'Join'
                                                     );
                                             }
                                         }
@@ -367,7 +367,7 @@ class OneLine extends PluginBase implements Listener{
                                 $this->prefix,
                                 $arenaname,
                                 TextFormat::GRAY.'1'.TextFormat::BLACK.' / '.TextFormat::RED.'2',
-                                TextFormat::GREEN.'JOIN'
+                                TextFormat::GREEN.'Join'
                             );
                         
                     }elseif($playercount == 1){
@@ -497,7 +497,7 @@ class OneLine extends PluginBase implements Listener{
                 $damagerinv = $damager->getInventory();
                 $iteminhand = $damagerinv->getItemInHand()->getId();
                 if($iteminhand == 280){
-                    $event->setKnockBack(0.3);
+                    $event->setKnockBack(0.4);
                     $event->setDamage(0);
                 }
             }
@@ -530,7 +530,7 @@ class OneLine extends PluginBase implements Listener{
                                     $prefix,
                                     $gamename,
                                     TextFormat::GRAY.'0'.TextFormat::BLACK.' / '.TextFormat::RED.'2',
-                                    TextFormat::GREEN.'GREEN'
+                                    TextFormat::GREEN.'Join'
                                     );
                         }
                     }
@@ -568,7 +568,7 @@ class OneLine extends PluginBase implements Listener{
                                         $this->prefix,
                                         $arenaname,
                                         TextFormat::GRAY.'0'.TextFormat::BLACK.' / '.TextFormat::RED.'2',
-                                        TextFormat::GREEN.'JOIN'
+                                        TextFormat::GREEN.'Join'
                                         );
                             }
                         }
@@ -591,7 +591,7 @@ class OneLine extends PluginBase implements Listener{
                                         $this->prefix,
                                         $arenaname,
                                         TextFormat::GRAY.'0'.TextFormat::BLACK.' / '.TextFormat::RED.'2',
-                                        TextFormat::GREEN.'JOIN'
+                                        TextFormat::GREEN.'Join'
                                         );
                             }
                         }
@@ -624,7 +624,7 @@ class OneLine extends PluginBase implements Listener{
                                         $this->prefix,
                                         $arenaname,
                                         TextFormat::GRAY.'0'.TextFormat::BLACK.' / '.TextFormat::RED.'2',
-                                        TextFormat::GREEN.'JOIN'
+                                        TextFormat::GREEN.'Join'
                                         );
                             }
                         }
@@ -764,7 +764,7 @@ class OLTask extends PluginTask{
                             return;
                         }
                         $player->getLevel()->addSound(new ClickSound($player));
-                        $player->sendMessage($prefix.TextFormat::WHITE.'Waiting for 2 Players');
+                        $player->sendMessage($prefix.TextFormat::WHITE.' Waiting for 2 Players');
                     }
                     
                     $arenafile->set('counter', 0);
